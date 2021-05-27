@@ -57,6 +57,7 @@ def copy_file(src_path,file_dst,path):
     dst_path = ""
     with open(file_dst) as fp:
         for system in fp:
+            system = system.strip()
             dst_path = dest_path_join(path,system)
             _copy_file(src_path,dst_path)
 
@@ -64,6 +65,7 @@ def copy_dir(src_path,file_dst,path):
     dst_path =""
     with open(file_dst) as fp:
         for system in fp:
+            system = system.strip()
             dst_path = dest_path_join(path,system)
             _copy_dir(src_path,dst_path)
 
